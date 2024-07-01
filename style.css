@@ -1,15 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+.service-icons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .service-icons-group {
   width: 100%;
   z-index: 999999 !important;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .service-icon-group {
@@ -20,4 +25,27 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+@media screen and (min-width: 0px) and (max-width: 550px) {
+  .service-icons-group {
+    width: 100%;
+    z-index: 999999 !important;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+#id {
+  position: relative;
+}
+#id::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 53.5px;
+  height: 23px;
+  background-image: url();
+  transform: translate(-50%, -50%);
 }
